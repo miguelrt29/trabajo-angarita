@@ -1,7 +1,7 @@
 const archivos = require ('fs/promises');
 
 async function crearArchivos (){
-    for(let i = 1; i <=200; i++){
+    for(let i = 1; i <=500; i++){
 
         const nombreArchivo = `archivo_${i}.txt`;
         const contenido = `este es el numero ${i}`;
