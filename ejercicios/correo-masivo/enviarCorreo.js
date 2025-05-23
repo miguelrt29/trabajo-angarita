@@ -1,22 +1,22 @@
 const nodemailer = require('nodemailer');
 const destinatarios = [
-    'miguelrt29@ejemplo.com',
-    'miguelrt@ejemplo.com',
-    'miguelrt29@ejemplo.com',
+    'miguelrt2903@gmail.com',
+    'miguelrt2903@gmail.com',
+    'miguelrt2903@gmail.com',
 ];
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'Pepitooperez148501@gmail.com',
-        pass: 'Hacker1041.'
+        pass: 'fmnh yevn vfkw waji'
     }
 });
 
 async function enviarCorreo(destinatario) {
     try {
         await transporter.sendMail({
-            from: '"Tu Nombre" miguelrt29@gmail.com',
+            from: '"Tu Nombre" <Pepitooperez148501@gmail.com>',
             to: destinatario,
             subject: 'Correo masivo de prueba',
             text: '¡Hola! Este es un mensaje de prueba enviado con Nodemailer.',
