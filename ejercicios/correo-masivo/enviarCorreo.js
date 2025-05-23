@@ -1,5 +1,6 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 const destinatarios = [
+
     'miguelrt2903@gmail.com',
     'miguelrt2903@gmail.com',
     'miguelrt2903@gmail.com',
@@ -22,17 +23,19 @@ async function enviarCorreo(destinatario) {
             text: '¡Hola! Este es un mensaje de prueba enviado con Nodemailer.',
         });
 
-        console.log(` Correo enviado a ${destinatario}`);
-    } catch (error) {
-        console.error(` Error con ${destinatario}:`, error.message);
-    }
+
+    console.log(` Correo enviado a ${destinatario}`);
+  } catch (error) {
+    console.error(` Error con ${destinatario}:`, error.message);
+  }
 }
 
 async function enviarCorreosMasivos() {
-    const tareas = destinatarios.map(destino => enviarCorreo(destino));
-    await Promise.all(tareas); 
-    console.log(' Todos los correos han sido procesados.y se mostraran enseguida');
+  const tareas = destinatarios.map((destino) => enviarCorreo(destino));
+  await Promise.all(tareas);
+  console.log(
+    " Todos los correos han sido procesados.y se mostraran enseguida"
+  );
 }
-
 
 enviarCorreosMasivos();
