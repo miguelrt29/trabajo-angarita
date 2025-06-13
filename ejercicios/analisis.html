@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detector de Sentimiento</title>
+</head>
+
+<body>
+    <div class="todo">
+        <h2>¿Qué opinas?</h2>
+        <textarea id="inputText" rows="4" cols="50" placeholder="Escribe tu opinion..."></textarea><br><br>
+        <button id="analizarBtn">Analizar</button>
+
+        <div class="respuesta">
+
+            <p id="loader" style="display: none;">Analizando...</p>
+            <p id="resultado"></p>
+
+            <!-- Enlazamos el JS -->
+            <script src="analisis-pos-neg.js"></script>
+        </div>
+
+    </div>
+
+    <style>
+        body {
+            background-color: gray;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            padding: 80px 80px;
+            background-color: black;
+            align-items: center;
+
+
+        }
+
+        .todo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            background-color: red;
+            padding: 50px 50px;
+            width: 50%;
+            border-radius: 10px;
+            margin-top: 150px;
+
+
+        }
+
+        textarea {
+            display: flex;
+            text-align-last: center;
+            border-radius: 5px;
+            resize: none;
+
+
+        }
+
+        button {
+            padding: 5px 5px;
+            background-color: black;
+            color: white;
+            width: 30%;
+            border-radius: 3px;
+          
+        }
+
+    </style>
+
+</body>
+
+</html>
